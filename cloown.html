@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="cloown.css">
+    <title>Clown Game</title>
+</head>
+<body>
+    <audio id="pip" aria-valuenow="20" src="audio.mp3"></audio>
+    <audio autoplay id="audioback" src='audioback.mp3' ></audio>
+    <audio src="laugh2.mp3" id="laugh"></audio>
+    <audio src="kill.mp3" id="killaudio"></audio>
+    <audio autoplay id="soulmp3" src="soulmp3.mp3"></audio>
+    <audio src="scrym.mp3" id="scrym"></audio>
+    <audio src="run.mp3" id="win"></audio>
+    <span id="baf" onclick="audio()"><i class='bx bxs-volume-mute'></i></span>
+
+
+<div class="content" id="content">
+    <div class="back" id="back">
+        <h1><a onclick="start()" id="links1" href="#">Start Game</a></h1>
+        <h1><a onclick="start()" id="links2" href="#">New Game</a></h1>
+        <h4><a onclick="rulsshow()" id="links3" href="#">Ruls</a></h4>
+    </div>
+    <div class="ruls" onclick="rulscloas()" id="rulslist">You need to collect 13 points to win and escape from the evil clown. You have 10 turns to collect points, and you have 3 chances to change the result, <span>use them wisely!</span><div>X</div></div>
+    <div class="game-play" id="game-play">
+        <div id="image" class="imageofclown"><img src="clown-removebg-preview.png" id="imageofclown" alt="photo"></div>
+        <div class="cart" onclick="target();index1();index2();index3()" id="cart">
+            <div class="item" id="item">
+                <div class="child-item" id="child1">00</div>
+                <div class="child-item" id="child2">00</div>
+                <div class="child-item" id="child3">00</div>
+            </div>
+        </div>
+        
+        <div class="box" id="box">
+            <div class="dice" id="dice1">00</div>
+            <div class="dice" id="dice2">00</div>
+            <div class="dice" id="dice3">00</div>
+        </div>
+        <div class="run" id="run" onclick="randomdice();randomdice2();randomdice3();replay()"></div>
+        <div class="replay" id="replay">
+            <h1>Do you want to change it?</h1>
+            <h1><span id="no" onclick="No();No1()">No</span><span id="yes" onclick="Yes()">Yes</span></h1>
+        </div>
+        <div id="home" onclick="front()"><i class='bx bxs-home'></i></div>
+        <div id="chanse"></div>
+        <div id="lps"></div>
+        <div id="pts"></div>
+        <span id="text"></span>
+    </div>
+    
+</div>
+
+
+
+    <script src="cloown.js"></script>
+</body>
+</html>
